@@ -1,0 +1,125 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:-//Moodle Pty Ltd//NONSGML Moodle Version 2019052001.02//EN
+VERSION:2.0
+BEGIN:VEVENT
+UID:22080@elearning.fh-joanneum.at
+SUMMARY:Abgabe der dritten Übung | Adobe XD Prototype ist fällig.
+DESCRIPTION:Abgaben:\n\nPrototype mittels Share oder XD File (oder Äquivale
+	nt).\n\nInhalt: Klickbarer Prototype mit bewusstem einsetzen von Design Pat
+	terns/Guidelines (wie in Einheit 4 gesendet).\n\nDateiname: Uebung3MobPlatG
+	ruppe<Gruppennummer einfügen>.zip\n\nEine Abgabe pro Gruppe genügt\, jedoch
+	 müssen ALLE Gruppenmitglieder mit dem Nachanmen im Titel der Datei stehen!
+	\n\nZu erreichende Punkte: 10\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20191105T100748Z
+DTSTAMP:20191210T125850Z
+DTSTART:20191202T225900Z
+DTEND:20191202T225900Z
+CATEGORIES:Mobile Platforms (MSD\,WS19)
+END:VEVENT
+BEGIN:VEVENT
+UID:23416@elearning.fh-joanneum.at
+SUMMARY:Reflection # 2 ist fällig.
+DESCRIPTION:Make everything or a part of what you have learned in this phas
+	e the subject of your reflection.\n\n \n\n•Record what you have learned\n•A
+	ssess what you have learned in terms of its usefulness\n100-150 words at th
+	e end of each phase.\n\nUpload onto Moodle.\n\nMax. score per reflection: 1
+	0 pts.\n\nAssessment criteria of your reflection:\n\nCompleteness: 4 pts.\n
+	\nLanguage correctness: 4 pts\n\nDepth/Content/Conciseness: 2 pts.\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20191127T091113Z
+DTSTAMP:20191210T125850Z
+DTSTART:20191204T225900Z
+DTEND:20191204T225900Z
+CATEGORIES:Business Communications (MSD\,WS19)
+END:VEVENT
+BEGIN:VEVENT
+UID:23414@elearning.fh-joanneum.at
+SUMMARY:Hand in your ideas (2) updated version ist fällig.
+DESCRIPTION:Bitte laden Sie Ihre aktualisierte Version Ihres Scripting Them
+	as hoch\, vielen Dank!\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20191127T125907Z
+DTSTAMP:20191210T125850Z
+DTSTART:20191209T230000Z
+DTEND:20191209T230000Z
+CATEGORIES:Scripting (MSD\,WS19)
+END:VEVENT
+BEGIN:VEVENT
+UID:23411@elearning.fh-joanneum.at
+SUMMARY:Testprotokoll Sprint 2 ist fällig.
+DESCRIPTION:Laden Sie Ihr UNTERZEICHNETES TESTPROTOKOLL hoch (unterzeichnet
+	 von beiden Teams sprich den Testern)\n\ntesten Sie die Implementierungen l
+	aut nachfolgenden Einteilung:\n\n	* TESTER   -> ZU TESTEN\n\n	* Gruppe 1 ->
+	 Gruppe 4\n	* Gruppe 2 -> Gruppe 5\n	* Gruppe 3 -> Gruppe 6\n	* Gruppe 4 ->
+	 Gruppe 1\n	* Gruppe 5 -> Gruppe 2\n	* Gruppe 6 -> Gruppe 3\n\nMINDESTINHAL
+	T:\n\n	* _Strukturierung des Dokuments_\n\n	* Titel\n	* Seitenanzahl in Fuß
+	zeile\n	* Beschreibung der Funktion (3-5 Sätze)\n	* Team\n	* Tester\n	* ...
+	\n\n	* _nachvollziehbares Vorgehen beim manuellen Testen_\n\n	* Was wurde g
+	etestet?\n	* Wo wurde getestet?\n	* Wie wurde getestet?\n	* eventuelle Scre
+	enshots\n	* ...\n\n	* _Ergänzungen des zweiten Testers_\n\n	* Bestätigung\n
+		* vorhandene Fehler (sofern vorhanden)\n	* ...\n\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20191126T162350Z
+DTSTAMP:20191210T125850Z
+DTSTART:20191210T225900Z
+DTEND:20191210T225900Z
+CATEGORIES:Web Application Development (MSD\,WS19)
+END:VEVENT
+BEGIN:VEVENT
+UID:23449@elearning.fh-joanneum.at
+SUMMARY:Abgabe Design Patterns ist fällig.
+DESCRIPTION:BEISPIEL REFACTOR TO DESIGN PATTERNS\n\nErweitern sie bzw. ände
+	rn sie das Chatroom- Beispiel\n\nCODE https://github.com/elmarkrainz/msd18-
+	swdesign-despat-exercise [1]\n\nERWEITERN SIE DIE KLASSE _CHATROOMSINGLETON
+	_ ZU EINEM SINGLETON PATTERN\n\n	*\njeder User soll Zugriff auf den gleiche
+	n _Chatroom_ haben\n\n	*\nerstellen sie die entsprechen Codestruktur\, dami
+	t das Singleton Pattern erfüllt wird (beachten beachten sie das UML-DIAGRAM
+	)\n\nUSER SOLLEN ÜBER NEUE MESSAGE IM CHATROOM VIA OBSERVER PATTERN BENACHR
+	ICHTIGT WERDEN\n\n	*\nErstellen sie das Interface _ChatObserver_ und _ChatO
+	bservation_ lt. UML Diagram\n\n	*\nErstellen sie die Klasse _ConcreteChatOb
+	servation_\, die das Interface _ChatObservation_ implementiert\n\n	*\nDie K
+	lasse _ChatRoomSingleton_ besitzt eine Instanz von _ConcreteChatObservation
+	_\, beim Aufruf von\n\n   requestUpdates(User user) \n   \n   chatRoom.requ
+	estUpdates(alice)\; // alice bekommt Nachrichten\n\nwird der jeweilige User
+	 via Observer Pattern zur Benachrichtigung benachrichtigt\n\n	*\nKlasse _Us
+	er_ implementiert Interface _ChatObserver_\n\n	*\nnach jeder Message werden
+	 jene User über nachrichten informiert\n\n  Bob says Hello\n  Alice receive
+	s Bob says Hello\n  Chris receives Bob says Hello\n\nDie Klasse _ChatMain_ 
+	soll folgenden Output liefern\n\nAlice says hi\nAlice receives Alice says h
+	i\nChris receives Alice says hi\nBob says Hello\nAlice receives Bob says He
+	llo\nChris receives Bob says Hello\nChris says Ciao\nAlice receives Chris s
+	ays Ciao\nChris receives Chris says Ciao\nDean says Grias di\nAlice receive
+	s Dean says Grias di\nChris receives Dean says Grias di\n\nUML diagram\n\n>
+	>>  ABGABE <<<\n\n	*\nCode-Dokumentation mit der Beschreibung der Änderunge
+	n (welcher Codeteil\, Screenshot\, Begründung)\n\nVergessen Sie nicht Name 
+	& Struktur (wie Überschriften und Seitenzahlen) in den Dokumenten\n\nGeben 
+	sie alles als _NACHNAME_ABGABE3.ZIP_ ab\n\n\n\nLinks:\n------\n[1] https://
+	github.com/elmarkrainz/msd18-swdesign-despat-exercise\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20191209T073002Z
+DTSTAMP:20191210T125850Z
+DTSTART:20191222T225900Z
+DTEND:20191222T225900Z
+CATEGORIES:Software Design (MSD\,WS19)
+END:VEVENT
+BEGIN:VEVENT
+UID:23408@elearning.fh-joanneum.at
+SUMMARY:Dummy Assignment Folder to show the deadline ist fällig.
+DESCRIPTION:This assignment folder was set up to display the deadline for y
+	our quizlet set:\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20191126T115830Z
+DTSTAMP:20191210T125850Z
+DTSTART:20191231T225900Z
+DTEND:20191231T225900Z
+CATEGORIES:Business Communications (MSD\,WS19)
+END:VEVENT
+END:VCALENDAR
