@@ -20,7 +20,8 @@ INSERT INTO kalender(event_typ,lehrveranstaltung,bezeichnung,beschreibung,startz
 ALTER TABLE kalender ADD COLUMN uid VARCHAR(400);
 ALTER TABLE kalender ADD CONSTRAINT uid_unique UNIQUE (uid);
 pip install icalendar
-python3.7 -m pip install icalendar
-
-
-https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/
+python3.7 -m pip install icalendarc
+select kal_id, uid, endzeit, left(bezeichnung,25), prioritaet FROM kalender;
+DELETE FROM kalender WHERE kal_id = 1;
+commit;
+ALTER TABLE kalender ADD COLUMN prioritaet VARCHAR(1);
