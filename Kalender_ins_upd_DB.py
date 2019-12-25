@@ -1,9 +1,17 @@
 #!/usr/bin/python
 import mysql.connector as mariadb
 from icalendar import Calendar, Event
+import re
 
 def get_prioritaet(bez, besch):
-    return "M"
+    txt = str(bez) + " " + str(besch) #full text
+    x = re.search("Pr[ü,u]e?fung", txt)
+    if x:
+        return "H"
+    x = re.search("Abgabe", txt)
+    if x:
+        return "M"
+    return "L"
 
 mariadb_connection = mariadb.connect(user='raspi', password='raspi', database='fachhochschule')
 cursor = mariadb_connection.cursor(buffered=True)
