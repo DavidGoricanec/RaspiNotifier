@@ -29,7 +29,7 @@ else:
     for endzeit,bezeichnung,beschreibung, in cursor:
         text = text + "Am: " + endzeit.strftime("%Y-%m-%d") + "\n" + bezeichnung + "\n" + beschreibung + "\n\n"
 
-    text = text + "\n Gesendet mit <3 von deinem Raspberry Pi"
+    text = text + "\n Gesendet mit ❤ von deinem Raspberry Pi"
 
     # Create a secure SSL context
     context = ssl.create_default_context()
