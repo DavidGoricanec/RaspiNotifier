@@ -13,6 +13,8 @@ def get_prioritaet(bez, besch):
         return "M"
     return "L"
 
+#print("Kalender_ins_upd_DB start")
+
 mariadb_connection = mariadb.connect(user='raspi', password='raspi', database='fachhochschule')
 cursor = mariadb_connection.cursor(buffered=True)
 

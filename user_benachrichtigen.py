@@ -3,7 +3,7 @@ import smtplib, ssl
 import mysql.connector as mariadb
 import telegram_send
 
-#print("user benachrichtigung")
+#print("user benachrichtigung start")
 
 #Variablen
 mariadb_connection = mariadb.connect(user='raspi', password='raspi', database='fachhochschule')
@@ -47,7 +47,7 @@ else:
         for rec in receiver_emails:
             server.sendmail(sender_email, rec, emailmessage)
         server.close()
-    print("Done: Emails gesendet")
+    print("Done: Email(s) gesendet")
 
     #Telegram
     telegram_send.send(messages=[text])

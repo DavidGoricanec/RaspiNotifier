@@ -25,3 +25,5 @@ select kal_id, uid, endzeit, left(bezeichnung,25), prioritaet FROM kalender;
 DELETE FROM kalender WHERE kal_id = 1;
 commit;
 ALTER TABLE kalender ADD COLUMN prioritaet VARCHAR(1);
+python3.7 -m pip install telegram-send
+crontab -e
