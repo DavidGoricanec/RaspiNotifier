@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import smtplib, ssl
 import mysql.connector as mariadb
+import telegram_send
 
 #print("user benachrichtigung")
 
@@ -15,7 +16,7 @@ text= "Das steht in deinem Kalender:"
 emailmessage = ("""\
 Subject: RaspberryPi-Kalender
 
-\n\n""")
+""")
 
 
 cursor.execute("""SELECT endzeit, bezeichnung, beschreibung FROM kalender
@@ -27,10 +28,11 @@ if cursor.rowcount == 0:
     print("Done: Keine Daten zu senden")
 else:
     for endzeit,bezeichnung,beschreibung, in cursor:
-        text = text + "Am: " + endzeit.strftime("%Y-%m-%d") + "\n" + bezeichnung + "\n" + beschreibung + "\n\n"
+        text = text + "\nAm: " + endzeit.strftime("%Y-%m-%d") + "\n" + bezeichnung + "\n" + beschreibung + "\n"
 
-    text = text + "\n Gesendet mit ❤ von deinem Raspberry Pi"
+    text = text + "\nGesendet mit ❤ von deinem Raspberry Pi"
 
+    #EMail
     # Create a secure SSL context
     context = ssl.create_default_context()
 
@@ -46,3 +48,7 @@ else:
             server.sendmail(sender_email, rec, emailmessage)
         server.close()
     print("Done: Emails gesendet")
+
+    #Telegram
+    telegram_send.send(messages=[text])
+    print("Nachricht(en) gesendet")
