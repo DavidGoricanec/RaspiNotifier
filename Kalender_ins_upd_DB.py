@@ -60,3 +60,4 @@ for component in gcal.walk():
 mariadb_connection.commit()
 print("Data commited; Inserted: "+ str(inserted) + " | updated: " + str(updated))
 g.close()
+mariadb_connection.close()
