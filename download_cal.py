@@ -8,4 +8,4 @@ url = 'https://elearning.fh-joanneum.at/calendar/export_execute.php?userid=2629&
 # Downloads file using download link as first parameter and destination as second paramter
 urllib.request.urlretrieve(url, '/home/pi/Dokumente/RaspiNotifier/kalender.ics')
 
-print('finished')
+print('Download fertig')

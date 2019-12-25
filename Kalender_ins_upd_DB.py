@@ -49,7 +49,7 @@ for component in gcal.walk():
             #insert - data doesn't exists
             #print("inserting uid: " + uid)
             cursor.execute("INSERT INTO kalender (event_typ,bezeichnung,beschreibung,startzeit,endzeit,uid,prioritaet) VALUES ('FH',%s,%s,%s,%s,%s,%s)", (bezeichnung,beschreibung,startzeit,endzeit,uid,get_prioritaet(bezeichnung,beschreibung)))
-            insert = insert + 1
+            inserted = inserted + 1
         else:
             #update
             kal_id = cursor.fetchone()[0]
