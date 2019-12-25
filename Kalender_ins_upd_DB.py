@@ -16,10 +16,6 @@ def get_prioritaet(bez, besch):
 mariadb_connection = mariadb.connect(user='raspi', password='raspi', database='fachhochschule')
 cursor = mariadb_connection.cursor(buffered=True)
 
-#selecting
-#for kal_id,event_typ,bezeichnung,beschreibung,startzeit,endzeit in cursor:
-#    print(("Kal_id: {}, event_typ: {}").format(kal_id,event_typ))
-
 #some stats for logging
 inserted = 0
 updated = 0
