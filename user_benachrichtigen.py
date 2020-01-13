@@ -11,7 +11,7 @@ cursor = mariadb_connection.cursor(buffered=True)
 
 port = 465  # For SSL
 sender_email = "GoricanecRasPi@gmail.com"
-receiver_emails = ["GoricanecRasPi@gmail.com"] #, "ownifty@gmail.com"
+receiver_emails = ["GoricanecRasPi@gmail.com", "ownifty@gmail.com"]
 text= "Das steht in deinem Kalender:"
 emailmessage = ("""\
 Subject: RaspberryPi-Kalender
