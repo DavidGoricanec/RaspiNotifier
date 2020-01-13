@@ -5,10 +5,10 @@ import re
 
 def get_prioritaet(bez, besch):
     txt = str(bez) + " " + str(besch) #full text
-    x = re.search("Pr[ü,u]e?fung", txt)
+    x = re.search("[P,p]r[ü,u]e?fung|[K,k]lausur|[T,t]est|[A,a]bschlu[ss,ß]arbeit", txt)
     if x:
         return "H"
-    x = re.search("Abgabe", txt)
+    x = re.search("[A,a]bgabe|[P,p]r[ä,a]e?sentation|ist *f[ä,a]e?llig", txt)
     if x:
         return "M"
     return "L"

@@ -16,7 +16,7 @@ else:
     cursor.execute("DELETE FROM myIP")
     cursor.execute("INSERT INTO myIP (ip_adr) VALUES (%s)",(new_ip,))
     mariadb_connection.commit()
-    telegram_send.send(messages=["Neue IP: " + new_ip])
+    telegram_send.send(messages=["Neue IP: " + new_ip+":3389"])
     print("New IP added to DB and send to user")
 
 mariadb_connection.close()
