@@ -20,9 +20,10 @@ Subject: RaspberryPi-Kalender
 
 
 cursor.execute("""SELECT endzeit, bezeichnung, beschreibung FROM kalender
-                  WHERE (prioritaet = 'H' AND endzeit >= NOW() AND endzeit <= NOW() + INTERVAL 10 DAY)
-                     OR (prioritaet = 'M' AND endzeit >= NOW() AND endzeit <= NOW() + INTERVAL 7 DAY)
-                     OR (prioritaet = 'L' AND endzeit >= NOW() AND endzeit <= NOW() + INTERVAL 3 DAY)
+                  WHERE (prioritaet = 'H' AND endzeit > NOW()- INTERVAL 1 DAY AND endzeit <= (NOW() + INTERVAL 10 DAY))
+                     OR (prioritaet = 'M' AND endzeit > NOW()- INTERVAL 1 DAY AND endzeit <= (NOW() + INTERVAL 7 DAY))
+                     OR (prioritaet = 'L' AND endzeit > NOW()- INTERVAL 1 DAY AND endzeit <= (NOW() + INTERVAL 3 DAY))
+                     OR (prioritaet = 'C' AND endzeit > NOW()- INTERVAL 1 DAY AND endzeit <= (NOW() + INTERVAL 1 DAY))
                   ORDER BY endzeit;""")
 if cursor.rowcount == 0:
     print("Done: Keine Daten zu senden")
